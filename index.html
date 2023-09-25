@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" data-files="Marker-Felt.woff img/wood.png">
+<head>
+
+<meta charset="UTF-8">
+<title>To-Do List</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://get.mavo.io/stable/mavo.min.css">
+<script src="https://get.mavo.io/stable/mavo.es5.min.js"></script>
+<link rel="stylesheet" href="style.css">
+
+</head>
+<body mv-app="todo" mv-storage="local" mv-mode="edit">
+
+<header>
+	<h1>My thanks</h1>
+	<p><strong>[count(done)]</strong> done out of <strong>[count(thank)]</strong> total</p>
+</header>
+
+<ul>
+	<li property="thank" mv-multiple>
+		<label>
+			<input property="done" type="checkbox" />
+			<span property="thankTitle">Do stuff</span>
+		</label>
+	</li>
+	<button class="clear-completed" mv-action="delete(thank where done)">Clear Completed</button>
+</ul>
+
+
+</body>
+</html>
