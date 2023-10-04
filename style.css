@@ -57,12 +57,12 @@ body {
     body ul::after {
       -webkit-transform: rotate(2deg);
       transform: rotate(2deg); }
-  body :checked + [property=thankTitle] {
+  body :checked + [property=taskTitle] {
     font-style: italic;
     text-decoration: line-through;
     color: gray;
     mix-blend-mode: multiply; }
-    body :checked + [property=thankTitle][mv-mode="edit"] > input.mv-editor {
+    body :checked + [property=taskTitle][mv-mode="edit"] > input.mv-editor {
       text-decoration: inherit; }
   body input::-webkit-input-placeholder {
     font-style: italic;
@@ -72,7 +72,7 @@ body {
     font-style: italic;
     color: #999;
     mix-blend-mode: multiply; }
-  body button.mv-add-thank {
+  body button.mv-add-task {
     padding: .2em .5em;
     margin-top: 1em;
     border-radius: .3em;
@@ -115,16 +115,16 @@ body {
     mix-blend-mode: multiply;
     border: 0; }
 
-li[property=thank] {
+li[property=task] {
   display: flex;
   align-items: center;
   border-bottom: 1px dashed rgba(51, 85, 153, 0.5);
   list-style: none;
   color: #013;
   font-size: 1.5rem; }
-  li[property=thank].mv-deleted {
+  li[property=task].mv-deleted {
     padding: .3em; }
-  li[property=thank] label {
+  li[property=task] label {
     flex: 1;
     padding: .2em;
     margin: .3em 0;
@@ -143,3 +143,23 @@ li[property=thank] {
     opacity: 1; }
 
 /*# sourceMappingURL=style.css.map */
+body {
+  background-color: #fff;
+  background-image: linear-gradient(90deg, transparent 79px, #abced4 79px, #abced4 81px, transparent 81px),
+linear-gradient(#eee .1em, transparent .1em);
+  background-size: 100% 1.2em;
+  color: black; }
+  body > header {
+    text-shadow: 0 0px 0px black; }
+    body > header > h1 {
+      color: #791cb5;
+      opacity: .9; }
+    body > header > h3 {
+      opacity: .9; }
+
+blockquote {
+  font-style: italic;
+  color: rgb(12, 157, 70); }
+  blockquote + p {
+    color: rgb(12, 157, 70); }
+

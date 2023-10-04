@@ -7,24 +7,31 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="mavo.min.css">
 <script src="mavo.es5.min.js"></script>
+<script src="locale.en.js"></script>
 <link rel="stylesheet" href="style.css">
 
 </head>
 <body mv-app="todo" mv-storage="local" mv-mode="edit">
 
+<div class="mv-bar mv-ui" style="background: #791cb5">
+	THỂ DỤC LÒNG BIẾT ƠN
+</div>
+
 <header>
-	<h1>My thanks</h1>
-	<p><strong>[count(done)]</strong> done out of <strong>[count(thank)]</strong> total</p>
+	<h3>NGÀY 21 / 09 / 2023</h3>
+	<blockquote><p>Anyone who has a why to live can bear almost any what.</p></blockquote><p>— NIETZSCHE</p>
+	<h1>Tôi biết ơn vì...</h1>
+	<p>Hoàn thành <strong>[count(done)]</strong> trong số <strong>[count(task)]</strong></p>
 </header>
 
 <ul>
-	<li property="thank" mv-multiple>
+	<li property="task" mv-multiple>
 		<label>
 			<input property="done" type="checkbox" />
-			<span property="thankTitle">Do stuff</span>
+			<span property="taskTitle" mv-editor-placeholder="(Tên biết ơn)">Tôi biết ơn</span>
 		</label>
 	</li>
-	<button class="clear-completed" mv-action="delete(thank where done)">Clear Completed</button>
+	<button class="clear-completed" mv-action="delete(task where done)">Xóa hoàn thành</button>
 </ul>
 
 
